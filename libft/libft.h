@@ -24,7 +24,6 @@
 # include <stdarg.h>
 # include <stdint.h>
 
-
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);
 void	*ft_calloc(size_t nitems, size_t size);
@@ -79,6 +78,5 @@ int		put_int(int n);
 int		put_int_uns(unsigned int n);
 int		put_hex(unsigned int nbr, char ident);
 size_t	put_ptr(void *addr, char ident);
-
 
 #endif

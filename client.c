@@ -6,7 +6,7 @@
 /*   By: lpesan <lpesan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 17:43:44 by lpesan            #+#    #+#             */
-/*   Updated: 2024/04/10 18:03:42 by lpesan           ###   ########.fr       */
+/*   Updated: 2024/04/16 18:44:32 by lpesan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,9 @@ int	decom_num(char num, int pid)
 		else
 			kill(pid, SIGUSR1);
 		i--;
-		usleep(300);
+		usleep(600);
 	}
+	return (1);
 }
 
 int	main(int ac, char *av[])
@@ -36,10 +37,10 @@ int	main(int ac, char *av[])
 
 	i = 0;
 	if (ac != 3)
-		return (printf("\n[Error] You have to use two arguments.\n"), 1);
+		return (ft_printf("\n[Error] You have to use two arguments.\n"), 1);
 	pid = ft_atoi(av[1]);
 	if (pid == 0)
-		return (ft_printf("error getting PID of server\n exiting...\n"), 1 );
+		return (ft_printf("error getting PID of server\n exiting...\n"), 1);
 	while (av[2][i])
 	{
 		decom_num(av[2][i++], pid);

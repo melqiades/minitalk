@@ -10,7 +10,7 @@ read -p "Enter arguments for your program (separate by spaces): " program_args
 num_runs=20
 
 # Specify the pause duration in seconds
-pause_duration=0.9 
+pause_duration=1 
 
 for (( i=1; i<=$num_runs; i++ )); do
   $program_to_run $program_args "The old lighthouse bathed the rugged coastline in its sweeping beam, a beacon against the stormy night."

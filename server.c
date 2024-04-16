@@ -6,7 +6,7 @@
 /*   By: lpesan <lpesan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 17:43:40 by lpesan            #+#    #+#             */
-/*   Updated: 2024/04/10 18:03:47 by lpesan           ###   ########.fr       */
+/*   Updated: 2024/04/11 16:05:01 by lpesan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ void	signal_handler(int signum)
 		c = ((c << 1) | 1);
 		i++;
 	}
-
 	if (i == 8)
 	{
 		if (c == 4)
@@ -39,9 +38,7 @@ void	signal_handler(int signum)
 		i = 0;
 		c = 0;
 	}
-
 }
-
 
 int	main(void)
 {
@@ -55,9 +52,7 @@ int	main(void)
 	sigaction(SIGUSR2, &sa, NULL);
 	if (sigaction(SIGUSR2, &sa, NULL) == -1)
 		return (ft_printf("Error setting up SIGUSR2 handler\n exiting..."), 1);
-
 	printf("Server is running\nPID = %d\n", getpid());
-
 	while (1)
 		sleep(1);
 	return (0);
