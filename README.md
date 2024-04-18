@@ -1,3 +1,5 @@
+<img src="https://github.com/melqiades/printf/assets/142016602/fe52e090-fe93-49b2-8a04-b0834a5023a7" width=20%>
+
 ## Minitalk
 
 Minitalk is a project that make use of signals to transmit messages. The communication goes from client to the server. 
